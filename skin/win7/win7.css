@@ -1,9 +1,5 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#nav-bar {
-    margin-right: 100px;
-}
-
 #verticaltabs-splitter {
     min-width: 3px !important;
     width: 3px !important;
@@ -120,7 +116,6 @@
     margin-top: -13px !important; /* height of the above image */
     margin-bottom: 0 !important;
 }
-
 
 /*** Tab toolbar styling ***/
 

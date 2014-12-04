@@ -11,9 +11,11 @@ SOURCES = \
 	skin/base.css \
 	skin/bindings.css \
 	skin/groups.xml \
+	skin/dark/dark.css \
+	skin/light/light.css \
 	skin/linux/linux.css \
-	skin/osx/closetab-white.png \
-	skin/osx/closetab.png \
+	skin/osx/closetab-white.svg \
+	skin/osx/closetab.svg \
 	skin/osx/dropmarker.png \
 	skin/osx/osx.css \
 	skin/osx/twisty.png \
@@ -27,8 +29,8 @@ SOURCES = \
 	verticaltabs.jsm \
 	$(NULL)
 
-all: release.xpi
+all: VerticalTabs.xpi
 
-release.xpi: $(SOURCES)
-	rm -f $@
-	zip -9r $@ $(SOURCES)
+VerticalTabs.xpi: $(SOURCES)
+	rm -f ./$@
+	zip -9r ./$@ $(SOURCES)

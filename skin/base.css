@@ -42,8 +42,8 @@ statuspanel:-moz-locale-dir(ltr):not([mirror]) .statuspanel-inner {
 }
 
 /* Undo a bunch of stuff for app tabs */
-.tabbrowser-tab[pinned] {
-    position: inherit;
+.tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+    position: inherit !important;
 }
 .tabbrowser-tab[pinned] > .tab-text {
     display: inherit;
@@ -85,6 +85,12 @@ statuspanel:-moz-locale-dir(ltr):not([mirror]) .statuspanel-inner {
 .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
     -moz-padding-end: 0px ! important;
     -moz-padding-start: 0px ! important;
+}
+
+/* get rid of the tab separator from horizontal tabs */
+.tabbrowser-tab:after,
+.tabbrowser-tab:before {
+  content: none !important;
 }
 
 /* Make room for the close/max/min button on the right of the window */
